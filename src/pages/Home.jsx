@@ -3,10 +3,10 @@ import HeroSlider from '../components/HeroSlider.jsx'
 import Seo from '../components/Seo.jsx'
 
 const stats = [
-  { label: 'Years of Trust', value: '10+' },
-  { label: 'Clients Served', value: '500+' },
-  { label: 'Tonnes Recycled', value: '20K+' },
-  { label: 'Metal Categories', value: '15+' },
+  { label: 'Years of Trust', value: '10+', icon: '🕒' },
+  { label: 'Clients Served', value: '500+', icon: '🤝' },
+  { label: 'Tonnes Recycled', value: '20K+', icon: '♻️' },
+  { label: 'Metal Categories', value: '15+', icon: '🧩' },
 ]
 
 const materials = [
@@ -53,22 +53,29 @@ export default function Home() {
       <HeroSlider />
 
       {/* Stats */}
-      <section className="border-b border-ink-900/5 bg-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-5 py-10 sm:px-8 sm:py-12 md:grid-cols-4 md:gap-6">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-2xl border border-ink-900/5 bg-brand-50/40 p-6 text-center transition hover:-translate-y-1 hover:shadow-md"
-            >
-              <div className="text-3xl font-bold text-ink-900 sm:text-4xl">{stat.value}</div>
-              <div className="mt-1 text-sm font-medium text-ink-700/60">{stat.label}</div>
-            </div>
-          ))}
+      <section className="relative z-10 bg-white pb-16 pt-10 sm:pb-20 sm:pt-14">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid grid-cols-2 divide-y divide-ink-900/5 rounded-3xl border border-ink-900/5 bg-white shadow-xl shadow-ink-900/5 sm:divide-x sm:divide-y-0 md:grid-cols-4">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="group flex flex-col items-center gap-2 px-6 py-8 text-center transition hover:bg-brand-50/50"
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-100 text-xl transition group-hover:scale-110">
+                  {stat.icon}
+                </span>
+                <div className="bg-gradient-to-r from-brand-600 to-brand-800 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
+                  {stat.value}
+                </div>
+                <div className="text-sm font-medium text-ink-700/60">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Intro */}
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
+      <section className="mx-auto max-w-7xl px-5 pb-20 pt-4 sm:px-8 sm:pt-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-sm font-bold uppercase tracking-widest text-brand-600">Who we are</p>
