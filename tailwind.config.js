@@ -26,9 +26,14 @@ export default {
                 }
             },
             fontFamily: {
-                sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+                sans: [
+                    '"Open Sans"',
+                    "ui-sans-serif",
+                    "system-ui",
+                    "sans-serif"
+                ],
                 display: [
-                    '"Space Grotesk"',
+                    '"Poppins"',
                     "ui-sans-serif",
                     "system-ui",
                     "sans-serif"

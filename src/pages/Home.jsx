@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import HeroSlider from '../components/HeroSlider.jsx'
 
 const stats = [
   { label: 'Years of Trust', value: '10+' },
@@ -43,58 +44,20 @@ const services = [
 export default function Home() {
   return (
     <div>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-ink-900 via-ink-900 to-ink-800">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle at 15% 10%, rgba(20,184,166,0.35), transparent 35%), radial-gradient(circle at 85% 30%, rgba(163,230,53,0.25), transparent 40%)',
-          }}
-        />
-        <div className="relative mx-auto flex max-w-7xl flex-col gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:flex-row lg:items-center lg:py-32">
-          <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-300">
-              Transparent Metal Recycling · Singapore
-            </span>
-            <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Recycling Solutions Built for a{' '}
-              <span className="bg-gradient-to-r from-brand-400 via-brand-300 to-lime-400 bg-clip-text text-transparent">
-                Sustainable Tomorrow
-              </span>
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-white/60">
-              APG Recycling Pte Ltd buys and sells all types of scrap materials with an ethical,
-              honest business model and the most transparent pricing and weighing processes in
-              Singapore.
-            </p>
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <Link
-                to="/contact"
-                className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-700 px-7 py-3.5 text-center text-sm font-bold text-white shadow-glow transition hover:brightness-110"
-              >
-                Request a Free Quote
-              </Link>
-              <Link
-                to="/services"
-              className="rounded-xl border border-white/20 px-7 py-3.5 text-center text-sm font-bold text-white transition hover:bg-white/10"
-              >
-                Explore Our Services
-              </Link>
-            </div>
-          </div>
+      <HeroSlider />
 
-          <div className="grid flex-1 grid-cols-2 gap-4 sm:gap-6">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition hover:-translate-y-1 hover:border-brand-400/30"
-              >
-                <div className="text-3xl font-bold text-white sm:text-4xl">{stat.value}</div>
-                <div className="mt-1 text-sm font-medium text-white/50">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+      {/* Stats */}
+      <section className="border-b border-ink-900/5 bg-white">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-5 py-10 sm:px-8 sm:py-12 md:grid-cols-4 md:gap-6">
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-2xl border border-ink-900/5 bg-brand-50/40 p-6 text-center transition hover:-translate-y-1 hover:shadow-md"
+            >
+              <div className="text-3xl font-bold text-ink-900 sm:text-4xl">{stat.value}</div>
+              <div className="mt-1 text-sm font-medium text-ink-700/60">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
