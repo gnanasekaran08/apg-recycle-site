@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import PageHero from '../components/PageHero.jsx'
+import Seo from '../components/Seo.jsx'
 
 const initialForm = { name: '', email: '', phone: '', message: '' }
 
@@ -20,6 +21,11 @@ export default function Contact() {
 
   return (
     <div>
+      <Seo
+        title="Contact Us"
+        description="Get in touch with APG Recycling for a scrap metal quote, pick-up scheduling or recycling enquiries. Office at No 1 Soon Lee Street, Singapore 627605."
+        path="/contact"
+      />
       <PageHero
         eyebrow="Contact Us"
         title="Let's Talk Recycling"

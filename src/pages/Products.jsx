@@ -1,4 +1,5 @@
 import PageHero from '../components/PageHero.jsx'
+import Seo from '../components/Seo.jsx'
 
 const categories = [
   {
@@ -24,6 +25,11 @@ const categories = [
 export default function Products() {
   return (
     <div>
+      <Seo
+        title="Scrap Materials Products"
+        description="Explore ferrous, non-ferrous and heavy industrial scrap steel products handled by APG Recycling, sorted and prepared to commodity-grade specifications."
+        path="/products"
+      />
       <PageHero
         eyebrow="Products"
         title="Scrap Materials Products"

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import HeroSlider from '../components/HeroSlider.jsx'
+import Seo from '../components/Seo.jsx'
 
 const stats = [
   { label: 'Years of Trust', value: '10+' },
@@ -44,6 +45,11 @@ const services = [
 export default function Home() {
   return (
     <div>
+      <Seo
+        title="Metal Scrap Recycling Singapore"
+        description="APG Recycling Pte Ltd buys and sells ferrous, non-ferrous and industrial scrap metals in Singapore with transparent pricing, digital weighing and next-day pick-ups."
+        path="/"
+      />
       <HeroSlider />
 
       {/* Stats */}

@@ -1,4 +1,5 @@
 import PageHero from '../components/PageHero.jsx'
+import Seo from '../components/Seo.jsx'
 
 const focusList = [
   'Knowledgeable staff',
@@ -12,6 +13,11 @@ const focusList = [
 export default function About() {
   return (
     <div>
+      <Seo
+        title="About Us"
+        description="APG Recycling Pte Ltd has provided ethical, transparent scrap metal recycling services in Singapore since 2014, following ISRI processing guidelines."
+        path="/about"
+      />
       <PageHero
         eyebrow="About Us"
         title="A Goal Setting to the Future"

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero.jsx'
+import Seo from '../components/Seo.jsx'
 
 const services = [
   {
@@ -22,6 +23,11 @@ const services = [
 export default function Services() {
   return (
     <div>
+      <Seo
+        title="Recycling Services"
+        description="Industrial scrap collection, demolition projects and machinery removal services from APG Recycling, serving businesses across Singapore."
+        path="/services"
+      />
       <PageHero
         eyebrow="Services"
         title="Services to Recycling Industries"
